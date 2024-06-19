@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- countdown  -->
+    <link
+      rel="stylesheet"
+      href="assets/css/simplyCountdown.theme.default.css"
+    />
+
+    <!-- animation  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="assets/js/simplyCountdown.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- hero -->
+    <section id="home">
+      <div class="hero container-lg sm:overflow-x-hidden md:overflow-x-hidden ">
+        <div
+          id="targetElement"
+          class="bg-[url('assets/img/bg1.jpg')] h-screen bg-cover bg-center text-center py-5 text-white shadow content-center brightness-50"
+        ></div>
+        <div
+          id="ubahWarna"
+          class="h-screen text-center py-4 text-white shadow content-center absolute top-0 left-0 right-0"
+        >
+          <h2 class="sambutan py-2 text-[20px] lg:text-[40px] font-semibold">
+            Undangan Pernikahan
+          </h2>
+          <h1 class="text-[64px] lg:text-[130px]">Aldo & Dinda</h1>
+          <h2 class="font-bold text-[18px] py-2">Kamis, 12 Desember 2025</h2>
+          <p class="py-1">Kpd Bpk/Ibu/Saudara/i</p>
+          <h3 class="namaPenerima py-2 font-bold text-[20px] lg:text-[30px]">
+            Yoga Riza Perdana
+          </h3>
+          <p class="tanpa py-1">
+            Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Berhadir Di
+            Acara Pernikahan Kami.
+          </p>
+          <div class="py-1">
+            <a
+              href="#home"
+              class="border rounded-md p-1 bg-slate-700 active:scale-90 active:shadow-inner tombol"
+              onClick="buka()"
+            >
+              <i class="bi bi-envelope-open p-1"></i>Buka Undangan
+            </a>
+          </div>
+          <p class="maaf py-1">
+            Mohon maaf apabila ada kesalahan penulisan nama, gelar dan alamat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- couple -->
+    <section>
+      <div id="couple" class="container-lg sm:overflow-x-hidden md:overflow-x-hidden ">
+        <div
+          class="couple h-sm-screen text-center py-5 content-center bg-red-200"
+        >
+          <h1 class="text-[23px] lg:text-[50px] mt-4">
+            Assalamualaikum Warahmatullahi Wabarakatuh
+          </h1>
+          <p class="py-1">
+            Dengan memohon rahmat dan ridho Allah SWT, Kami bermaksud mengundang
+            Bapak / Ibu / Saudara(i) dalam rangkaian acara resepsi pernikahan
+            putra-putri kami:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2">
+            <div
+              class="bg-white rounded-lg shadow-md px-5 m-4 max-w-[100%]"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+            >
+              <img
+                src="assets/img/cowo.png"
+                class="h-[200px] mx-auto py-4 mt-4"
+                alt=""
+              />
+              <h1 class="text-[30px]">Aldo Siapa</h1>
+              <div class="py-2">
+                <h2>Putra</h2>
+                <p>Bpk Lorem & Ibu Ipsum</p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-md px-5 m-4 max-w-[100%]"
+              data-aos="fade-left"
+              data-aos-duration="2000"
+            >
+              <img
+                src="assets/img/cewe.png"
+                class="h-[200px] mx-auto py-4 mt-4"
+                alt=""
+              />
+              <h1 class="text-[30px]">Dinda Siapa</h1>
+              <div class="py-2">
+                <h2>Putra</h2>
+                <p>Bpk Lorem & Ibu Ipsum</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- navbar  -->
+    <div
+      id="navbar"
+      class="navbar sm:overflow-x-hidden md:overflow-x-hidden fixed bottom-0 left-1/2 w-full max-w-[300px] md:max-w-[600px] -translate-x-1/2 bg-white shadow-lg rounded hidden mb-3 p-2"
+    >
+      <div class="flex justify-between px-2 py-2">
+        <div class="">
+          <a href="#home" class="text-center">
+            <i class="bi bi-house-door py-5 px-5"></i>
+            <span class="block text-xs text-gray-600">Home</span>
+          </a> 
+        </div>
+        <div class="">
+          <a href="#couple" class="text-center">
+            <i class="bi bi-people-fill py-5 px-5"></i>
+            <span class="block text-xs text-gray-600">Pasangan</span>
+          </a>
+        </div>
+        <div class="">
+          <a href="#info" class="text-center">
+            <i class="bi bi-calendar-check-fill py-5 px-5"></i>
+            <span class="block text-xs text-gray-600">Event</span>
+          </a>
+        </div>
+        <div class="">
+          <a href="#galery" class="text-center">
+            <i class="bi bi-images py-5 px-5"></i>
+            <span class="block text-xs text-gray-600">Galery</span>
+          </a>
+        </div>
+        <div class="">
+          <a href="#rsvp" class="text-center">
+            <i class="bi bi-chat-heart py-5 px-5"></i>
+            <span class="block text-xs text-gray-600">Ucapan</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section id="galery">
+      <div class="container-lg galery text-center py-4 sm:overflow-x-hidden md:overflow-x-hidden ">
+        <h1 class="mt-5 text-[30px] md:text-[40px]">Our Wedding Gallery</h1>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-2 mt-2 bg-blue">
+          <div class="">
+            <img
+              src="https://picsum.photos/id/301/200/200"
+              class="mx-auto w-[80%] rounded-lg"
+              alt="pp"
+            />
+          </div>
+          <div class="">
+            <img
+              src="https://picsum.photos/id/302/200/200"
+              class="mx-auto w-[80%] rounded-lg"
+              alt="pp"
+            />
+          </div>
+          <div class="">
+            <img
+              src="https://picsum.photos/id/309/200/200"
+              class="mx-auto w-[80%] rounded-lg"
+              alt="pp"
+            />
+          </div>
+          <div class="">
+            <img
+              src="https://picsum.photos/id/304/200/200"
+              class="mx-auto w-[80%] rounded-lg"
+              alt="pp"
+            />
+          </div>
+          <div class="">
+            <img
+              src="https://picsum.photos/id/305/200/200"
+              class="mx-auto w-[80%] rounded-lg"
+              alt="pp"
+            />
+          </div>
+          <div class="">
+            <img
+              src="https://picsum.photos/id/310/200/200"
+              class="mx-auto w-[80%] rounded-lg"
+              alt="pp"
+            />
+          </div>
+          <div class="">
+            <img
+              src="https://picsum.photos/id/307/200/200"
+              class="mx-auto w-[80%] rounded-lg"
+              alt="pp"
+            />
+          </div>
+          <div class="">
+            <img
+              src="https://picsum.photos/id/308/200/200"
+              class="mx-auto w-[80%] rounded-lg"
+              alt="pp"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-lg sm:overflow-x-hidden md:overflow-x-hidden ">
+        <div
+          class="quote bg-[url('assets/img/qoutes1.jpg')] bg-cover bg-center h-sm-screen text-center py-5 content-center"
+        >
+          <div
+            class="border-double border-4 border-white mr-4 ml-4 md:mr-20 md:ml-20 font-bold"
+          >
+            <h1 class="py-1 text-[30px]">Allah swt Berfirman</h1>
+            <p class="py-1 m-2">
+              "Dan di antara tanda-tanda kekuasaan-Nya diciptakan-Nya untukmu
+              pasangan hidup dari jenismu sendiri supaya kamu dapat ketenangan
+              hati dan dijadikannya kasih sayang di antara kamu. Sesungguhnya
+              yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang
+              yang berpikir."
+            </p>
+            <h3 class="py-2">~ Q.S. Ar-Rum: 21 ~</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info">
+      <div class="container-lg bg-red-200 sm:overflow-x-hidden md:overflow-x-hidden ">
+        <div class="info h-lg-screen text-center content-center py-5">
+          <h1 class="text-[30px]">Wedding Event</h1>
+          <div class="simply-countdown"></div>
+          <div class="grid grid-cols-1 md:grid-cols-2 py-2">
+            <div
+              class="bg-white rounded-lg shadow-md shadow-top-brown px-5 m-4 max-w-100%"  data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              <h1 class="text-[30px]">Akad</h1>
+              <div class="grid grid-cols-2">
+                <div class="bg-gray gap-3 p-1">
+                  <hr />
+
+                  <i class="bi bi-calendar3 mt-3"></i>
+                  <h2>Kamis,</h2>
+                  <p>12 Desember 2025</p>
+                  <hr />
+                </div>
+                <div class="bg-gray gap-3 p-1">
+                  <hr />
+
+                  <i class="bi bi-clock-fill"></i>
+                  <h2>13.00</h2>
+                  <p>Selesai</p>
+                  <hr />
+                </div>
+              </div>
+              <p class="py-4">
+                Jl. Panglima Sudirman No.58, Ngadilangkung, Kec. Kepanjen,
+                Kabupaten Malang, Jawa Timur 65163
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-md shadow-top-brown px-5 m-4 max-w-100%" data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              <h1 class="text-[30px]">Resepsi</h1>
+              <div class="grid grid-cols-2">
+                <div class="bg-gray gap-3 p-1">
+                  <hr />
+
+                  <i class="bi bi-calendar3 mt-3"></i>
+                  <h2>Kamis,</h2>
+                  <p>12 Desember 2025</p>
+                  <hr />
+                </div>
+                <div class="bg-gray gap-3 p-1">
+                  <hr />
+
+                  <i class="bi bi-clock-fill"></i>
+                  <h2>13.00</h2>
+                  <p>Selesai</p>
+                  <hr />
+                </div>
+              </div>
+              <p class="py-4">
+                Jl. Panglima Sudirman No.58, Ngadilangkung, Kec. Kepanjen,
+                Kabupaten Malang, Jawa Timur 65163
+              </p>
+            </div>
+          </div>
+          <div class="mb-20">
+            <a
+              href="https://maps.app.goo.gl/sLyEs9yPCGQ8hLTL9"
+              class="border rounded-md p-1 bg-white text-black active:scale-90 active:shadow-inner tombol"
+              target="_blank" data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              <i class="bi bi-geo-alt"></i>Lihat Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <div class="container-lg sm:overflow-x-hidden md:overflow-x-hidden ">
+        <div class="rsvp h-screen content-center text-center py-5">
+          <h1 class="text-[30px]">Konfirmasi Kehadiran dan Ucapan</h1>
+          <p class="ml-3 mr-3">
+            Tiada Yang Dapat Kami Ungkapkan Selain Rasa Terimakasih Dari Hati
+            Yang Tulus Apabila Bapak/ Ibu/ Saudara/i Berkenan Hadir Untuk
+            Memberikan Do’a Restu Kepada Kami
+          </p>
+          <div
+            class="bg-white rounded-lg shadow-md shadow-top-brown px-3 m-4 max-w-100%" data-aos="fade-down"
+            data-aos-duration="2000"
+          >
+            <div class="grid grid-cols-1" >
+              <form action="">
+                <div class="py-2">
+                  <input
+                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    type="text"
+                    placeholder="Nama"
+                    name="nama"
+                  />
+                </div>
+                <div class="py-2">
+                  <textarea
+                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    type="text"
+                    placeholder="Ucapan"
+                    name="ucapan"
+                  ></textarea>
+                </div>
+                <div class="py-2">
+                  <select
+                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    type="text"
+                    placeholder="Konfirmasi"
+                    name="status"
+                  >
+                    <option value="">Pilih Salah satu</option>
+                    <option value="hadir">Hadir</option>
+                    <option value="tidak hadir">Tidak Hadir</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="amplop h-screen content-center text-center py-5 sm:overflow-x-hidden md:overflow-x-hidden ">
+        <h1 class="text-[30px]">Amplop Digital</h1>
+        <p class="ml-3 mr-3">
+          Terima kasih telah melakukan konfirmasi kehadiran. Doa Bapak/ Ibu/
+          Saudara/i sudah merupakan hadiah terbaik bagi kami. Namun, jika
+          memberi adalah bentuk tanda kasih Anda, fitur ini dapat memberikan
+          Anda kemudahan
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div class="bg-gray-300 rounded-lg shadow-md px-5 m-4 max-w-[100%]"  data-aos="fade-right"
+          data-aos-duration="2000">
+            <div class="grid grid-cols-2 gap-3">
+              <div class=""></div>
+              <div class="">
+                <img
+                  src="assets/img/mandiri.svg"
+                  class="mx-auto h-[60px] w-[60px]"
+                  alt=""
+                />
+              </div>
+              <div class="text-left">
+                <h2>Nomor Rekening</h2>
+                <p id="textToCopy" class="text-left">012345678</p>
+              </div>
+              <div class="">
+                <button
+                  class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  id="copyButton"
+                >
+                  <i class="bi bi-copy mr-2"></i>
+                  Salin
+                </button>
+              </div>
+              <div class="">
+                <h2 class="text-left">Atas Nama</h2>
+                <p class="text-left mb-4">Aldo Siapa</p>
+              </div>
+              <div class="mx-auto">
+                <h2 class="text-left">Pernikahan</h2>
+                <p class="text-left mb-4">12/12/2025</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-300 rounded-lg shadow-md px-4 m-4 max-w-[100%]"  data-aos="fade-left"
+          data-aos-duration="2000">
+            <div class="grid grid-cols-2 gap-3">
+              <div class=""></div>
+              <div class="">
+                <img
+                  src="assets/img/ovo.svg"
+                  class="mx-auto h-[60px] w-[60px] mt-1"
+                  alt=""
+                />
+              </div>
+              <div class="text-left">
+                <h2>Nomor Rekening</h2>
+                <p id="textToCopy" class="text-left">012345678</p>
+              </div>
+              <div class="">
+                <button
+                  class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  id="copyButton"
+                >
+                  <i class="bi bi-copy mr-2"></i>
+                  Salin
+                </button>
+              </div>
+              <div class="">
+                <h2 class="text-left">Atas Nama</h2>
+                <p class="text-left mb-4">Dinda Siapa</p>
+              </div>
+              <div class="mx-auto">
+                <h2 class="text-left">Pernikahan</h2>
+                <p class="text-left mb-4">12/12/2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-lg py-5 mr-2 ">
+      <footer class="h-sm-screen bg-red-200 text-center py-4">
+        <h1 class="foot text-lg font-semibold mb-6">Aldo & Dinda</h1>
+        <div class="border-t border-black"></div>
+        <p class="text-sm py-2 mb-20">
+          Build with <i class="bi bi-heart-fill text-white"></i>
+          <a
+            href="https://www.instagram.com/pujil_29/?hl=en"
+            class="text-blue-600"
+            target="_blank"
+            >@Puji</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <div id="audio-container">
+      <audio id="song" autoplay loop>
+        <source src="assets/audio/akad-1.mp3" type="audio/mp3" />
+      </audio>
+
+      <div class="audio-icon-wrapper" style="display: none">
+        <i class="bi bi-disc"></i>
+      </div>
+    </div>
+
+    <script>
+      const rootElement = document.querySelector(":root");
+      let sambutan = document.querySelector(".hero .sambutan");
+      let kataKata = document.querySelector(".hero p");
+      let namaPenerima = document.querySelector(".hero .namaPenerima");
+      let tanpa = document.querySelector(".hero .tanpa");
+      let tombol = document.querySelector(".hero .tombol");
+      let maaf = document.querySelector(".hero .maaf");
+      let target = document.getElementById("targetElement");
+      let ubahWarna = document.getElementById("ubahWarna");
+      let navbar = document.getElementById("navbar");
+      const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+      const audioIcon = document.querySelector(".audio-icon-wrapper i");
+      const song = document.querySelector("#song");
+      let isClicked = false;
+
+      function disableScroll() {
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+        window.onscroll = function () {
+          window.scrollTo(scrollTop, scrollLeft);
+        };
+
+        rootElement.style.scrollBehavior = "auto";
+      }
+
+      function buka() {
+        window.onscroll = function () {};
+        rootElement.style.scrollBehavior = "";
+        if (!isClicked) {
+          // Perubahan konten dilakukan di sini
+          sambutan.innerHTML =
+            "Kami Mengundang Anda Untuk Merayakan Pernikahan Kami";
+          kataKata.innerHTML = "";
+          namaPenerima.innerHTML = "";
+          tanpa.innerHTML = "";
+          tombol.innerHTML =
+            '<i class="bi bi-calendar-check-fill"> Save Date </i>';
+          maaf.innerHTML = "";
+          target.classList.replace("brightness-50", "brightness-70");
+          ubahWarna.classList.replace("text-white", "text-black");
+
+          isClicked = true; // Setelah klik pertama, ubah variabel menjadi true
+          navbar.classList.toggle("hidden");
+          playAudio();
+        } else {
+          // Redirect ke Google pada klik kedua
+          window.location.href = "#info";
+          console.log(document.getElementById("info"));
+        }
+
+        function playAudio() {
+          song.volume = 0.3;
+          audioIconWrapper.style.display = "flex";
+          song.play();
+          isPlaying = true;
+        }
+
+        audioIconWrapper.onclick = function () {
+          if (isPlaying) {
+            song.pause();
+            audioIcon.classList.remove("bi-disc");
+            audioIcon.classList.add("bi-pause-circle");
+          } else {
+            song.play();
+            audioIcon.classList.add("bi-disc");
+            audioIcon.classList.remove("bi-pause-circle");
+          }
+
+          isPlaying = !isPlaying;
+        };
+      }
+      disableScroll();
+    </script>
+
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2024, // required
+        month: 12, // required
+        day: 12, // required
+        hours: 8, // Default is 0 [0-23] integer
+
+        words: {
+          //words displayed into the countdown
+          days: { singular: "hari", plural: "hari" },
+          hours: { singular: "jam", plural: "jam" },
+          minutes: { singular: "menit", plural: "menit" },
+          seconds: { singular: "detik", plural: "detik" },
+        },
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-left");
+            }
+          });
+        });
+
+        const elements = document.querySelectorAll(".fade-left");
+        elements.forEach((el) => observer.observe(el));
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      document;
+      document
+        .getElementById("copyButton")
+        .addEventListener("click", function () {
+          // Mengambil teks dari tag h2 dengan id 'textToCopy'
+          const textToCopy = document.getElementById("textToCopy").innerText;
+
+          // Membuat elemen textarea sementara untuk menyalin teks
+          const tempElem = document.createElement("textarea");
+          tempElem.value = textToCopy;
+          document.body.appendChild(tempElem);
+
+          // Menyalin teks ke clipboard
+          tempElem.select();
+          document.execCommand("copy");
+
+          // Menghapus elemen textarea sementara setelah menyalin
+          document.body.removeChild(tempElem);
+
+          // Opsi tambahan: Tampilkan notifikasi bahwa teks telah disalin
+          alert("Teks telah disalin!");
+        });
+    </script>
+  </body>
+</html>
