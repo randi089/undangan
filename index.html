@@ -129,7 +129,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2">
             <div
-              class="bg-white rounded-lg shadow-md px-5 m-4 max-w-[100%]"
+              class="atop bg-white rounded-lg shadow-md px-5 m-4 max-w-[100%]"
               data-aos="fade-right"
               data-aos-duration="2000"
             >
@@ -145,7 +145,7 @@
               </div>
             </div>
             <div
-              class="bg-white rounded-lg shadow-md px-5 m-4 max-w-[100%]"
+              class="abottom bg-white rounded-lg shadow-md px-5 m-4 max-w-[100%]"
               data-aos="fade-left"
               data-aos-duration="2000"
             >
@@ -390,7 +390,7 @@
           Anda kemudahan
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2">
-          <div class="bg-gray-300 rounded-lg shadow-md px-5 m-4 max-w-[100%]"  data-aos="fade-right"
+          <div class="atop bg-gray-300 rounded-lg shadow-md px-5 m-4 max-w-[100%]"  data-aos="fade-right"
           data-aos-duration="2000">
             <div class="grid grid-cols-2 gap-3">
               <div class=""></div>
@@ -424,7 +424,7 @@
               </div>
             </div>
           </div>
-          <div class="bg-gray-300 rounded-lg shadow-md px-4 m-4 max-w-[100%]"  data-aos="fade-left"
+          <div class="abottom bg-gray-300 rounded-lg shadow-md px-4 m-4 max-w-[100%]"  data-aos="fade-left"
           data-aos-duration="2000">
             <div class="grid grid-cols-2 gap-3">
               <div class=""></div>
@@ -502,10 +502,26 @@
       let ubahWarna = document.getElementById("ubahWarna");
       let navbar = document.getElementById("navbar");
       let fix = document.querySelector(".fix");
+      let atop = document.querySelectorAll('.atop');
+      let abottom = document.querySelectorAll('.abottom');
       const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
       const audioIcon = document.querySelector(".audio-icon-wrapper i");
       const song = document.querySelector("#song");
       let isClicked = false;
+
+      let width = window.matchMedia("(max-width: 650px)");
+
+      function mobile(width) {
+        if (width.matches) {
+          atop.forEach(e => {
+            e.setAttribute('data-aos', 'fade-top')
+          });
+
+          abottom.forEach(e => {
+            e.setAttribute('data-aos', 'fade-bottom')
+          });
+  }
+      }
 
       function disableScroll() {
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -535,6 +551,7 @@
           ubahWarna.classList.replace("text-white", "text-black");
 
           isClicked = true; // Setelah klik pertama, ubah variabel menjadi true
+          mobile(width);
           navbar.classList.remove("hidden");
           fix.classList.remove("hidden");
           playAudio();

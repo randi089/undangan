@@ -71,10 +71,3 @@ button,
     transform: translateX(0);
   }
 }
-
-@media (max-width: 650px) {
-  .navbar {
-    overflow: hidden;
-    margin-right: 0;
-  }
-}
