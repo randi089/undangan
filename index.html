@@ -72,6 +72,46 @@
       </div>
     </section>
 
+  <!-- navbar  -->
+  <div
+  id="navbar"
+  class="navbar sm:overflow-x-hidden md:overflow-x-hidden fixed bottom-0 left-1/2 w-full max-w-[300px] md:max-w-[600px] -translate-x-1/2 bg-white shadow-lg rounded hidden mb-3 p-2"
+>
+  <div class="flex justify-between px-2 py-2">
+    <div class="">
+      <a href="#home" class="text-center">
+        <i class="bi bi-house-door py-5 px-5"></i>
+        <span class="block text-xs text-gray-600">Home</span>
+      </a> 
+    </div>
+    <div class="">
+      <a href="#couple" class="text-center">
+        <i class="bi bi-people-fill py-5 px-5"></i>
+        <span class="block text-xs text-gray-600">Pasangan</span>
+      </a>
+    </div>
+    <div class="">
+      <a href="#info" class="text-center">
+        <i class="bi bi-calendar-check-fill py-5 px-5"></i>
+        <span class="block text-xs text-gray-600">Event</span>
+      </a>
+    </div>
+    <div class="">
+      <a href="#galery" class="text-center">
+        <i class="bi bi-images py-5 px-5"></i>
+        <span class="block text-xs text-gray-600">Galery</span>
+      </a>
+    </div>
+    <div class="">
+      <a href="#rsvp" class="text-center">
+        <i class="bi bi-chat-heart py-5 px-5"></i>
+        <span class="block text-xs text-gray-600">Ucapan</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="hidden fix">
     <!-- couple -->
     <section>
       <div id="couple" class="container-lg sm:overflow-x-hidden md:overflow-x-hidden ">
@@ -125,44 +165,7 @@
       </div>
     </section>
 
-    <!-- navbar  -->
-    <div
-      id="navbar"
-      class="navbar sm:overflow-x-hidden md:overflow-x-hidden fixed bottom-0 left-1/2 w-full max-w-[300px] md:max-w-[600px] -translate-x-1/2 bg-white shadow-lg rounded hidden mb-3 p-2"
-    >
-      <div class="flex justify-between px-2 py-2">
-        <div class="">
-          <a href="#home" class="text-center">
-            <i class="bi bi-house-door py-5 px-5"></i>
-            <span class="block text-xs text-gray-600">Home</span>
-          </a> 
-        </div>
-        <div class="">
-          <a href="#couple" class="text-center">
-            <i class="bi bi-people-fill py-5 px-5"></i>
-            <span class="block text-xs text-gray-600">Pasangan</span>
-          </a>
-        </div>
-        <div class="">
-          <a href="#info" class="text-center">
-            <i class="bi bi-calendar-check-fill py-5 px-5"></i>
-            <span class="block text-xs text-gray-600">Event</span>
-          </a>
-        </div>
-        <div class="">
-          <a href="#galery" class="text-center">
-            <i class="bi bi-images py-5 px-5"></i>
-            <span class="block text-xs text-gray-600">Galery</span>
-          </a>
-        </div>
-        <div class="">
-          <a href="#rsvp" class="text-center">
-            <i class="bi bi-chat-heart py-5 px-5"></i>
-            <span class="block text-xs text-gray-600">Ucapan</span>
-          </a>
-        </div>
-      </div>
-    </div>
+  
 
     <section id="galery">
       <div class="container-lg galery text-center py-4 sm:overflow-x-hidden md:overflow-x-hidden ">
@@ -459,6 +462,8 @@
       </div>
     </section>
 
+</div>
+
     <div class="container-lg py-5 mr-2 ">
       <footer class="h-sm-screen bg-red-200 text-center py-4">
         <h1 class="foot text-lg font-semibold mb-6">Aldo & Dinda</h1>
@@ -496,6 +501,7 @@
       let target = document.getElementById("targetElement");
       let ubahWarna = document.getElementById("ubahWarna");
       let navbar = document.getElementById("navbar");
+      let fix = document.querySelector(".fix");
       const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
       const audioIcon = document.querySelector(".audio-icon-wrapper i");
       const song = document.querySelector("#song");
@@ -530,6 +536,7 @@
 
           isClicked = true; // Setelah klik pertama, ubah variabel menjadi true
           navbar.classList.toggle("hidden");
+          fix.classList.toggle("hidden");
           playAudio();
         } else {
           // Redirect ke Google pada klik kedua
